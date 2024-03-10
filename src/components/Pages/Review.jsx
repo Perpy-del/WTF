@@ -20,6 +20,12 @@ function Review() {
   return (
     <>
       <ReviewForm handleAdd={AddReview} />
+
+      <div className="house-link">
+        <Link to="/">
+          <FaHouseDamage size={40} />
+        </Link>
+      </div>
       <div className="container">
         <Button
           type="button"
@@ -28,12 +34,6 @@ function Review() {
         >
           See All Reviews
         </Button>
-      </div>
-
-      <div className="about-link">
-        <Link to="/">
-          <FaHouseDamage size={40} />
-        </Link>
       </div>
     </>
   );
