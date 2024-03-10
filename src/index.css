@@ -20,7 +20,7 @@ ul {
 .container {
   max-width: 768px;
   margin: auto;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 
 header {
@@ -40,6 +40,7 @@ header {
   text-align: center;
   color: #202142;
 }
+
 .card {
   background-color: #fff;
   color: #333;
@@ -47,6 +48,12 @@ header {
   padding: 40px 50px;
   margin: 20px 0;
   position: relative;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
 }
 
 .card.reverse {
@@ -158,8 +165,9 @@ input:focus {
   border: 0;
   border-radius: 8px;
   color: #fff;
-  width: 100px;
-  height: 40px;
+  padding: 10px 30px;
+  /* width: 100px;
+  height: 40px; */
   cursor: pointer;
 }
 
@@ -234,5 +242,37 @@ input:focus {
 
   .input-group input {
     width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 899px){
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 768x;
+    margin: auto;
+    padding: 20px 120px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 2560px) {
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px
+  }
+
+  .card.review {
+    padding: 20px 40px;
+    max-height: 160px
+  }
+
+  .container {
+    max-width: 2560px;
+    margin: auto;
+    padding: 20px 80px;
   }
 }

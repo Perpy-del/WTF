@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 
 
 function ReviewStats({reviews}) {
     // sum of the total reviews rating and divided by the total length of the array and the output is converted to a single decimal place.
 
-    let average = (reviews.reduce((acc, cur) => {
+    let average = (reviews?.reduce((acc, cur) => {
         return acc + cur.rating}, 0)/reviews.length).toFixed(1)
 
   return (
