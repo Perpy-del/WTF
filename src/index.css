@@ -291,16 +291,13 @@ input:focus {
 
 @media (min-width: 900px) and (max-width: 2560px) {
   .card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
   }
   
   .review {
-    width: 250px;
-    height: 120px;
+    height: 130px;
     padding: 20px 40px;
   }
 
