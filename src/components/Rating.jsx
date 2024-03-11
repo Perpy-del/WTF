@@ -16,13 +16,13 @@ function Rating({ ratingState }) {
             <li key={i}>
               <input
                 type="radio"
-                id="num1"
+                id={`num${num}`}
                 name="rating"
-                value="1"
+                value={num}
                 onChange={handleSelect}
                 checked={selected === num}
               />
-              <label htmlFor="num1">{num}</label>
+              <label htmlFor={`num${num}`}>{num}</label>
             </li>
           );
         })}
