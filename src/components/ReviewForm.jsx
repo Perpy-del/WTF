@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ReviewContext } from '../ReviewContext';
 import Button from './layout/Button';
 import Rating from './Rating';
 
@@ -9,7 +11,9 @@ const spanStyle = {
   marginTop: '10px',
 };
 
-function ReviewForm({ handleAdd }) {
+function ReviewForm() {
+  const navigate = useNavigate();
+  const {AddReview} = useContext(ReviewContext)
   // state for input text
   const [text, setText] = useState('');
 
@@ -46,8 +50,9 @@ function ReviewForm({ handleAdd }) {
         text,
         rating,
       };
-      handleAdd(newReview);
+      AddReview(newReview);
       setText('');
+      navigate('/all-reviews');
     }
   };
 

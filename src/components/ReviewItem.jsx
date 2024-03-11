@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
+import { ReviewContext } from '../ReviewContext';
+import { useContext } from 'react';
 import { FaTimes } from "react-icons/fa"
 
-function ReviewItem({review, deleteReview}) {
-
+function ReviewItem({review}) {
+  const {deleteReview} = useContext(ReviewContext)
 
 
   return (

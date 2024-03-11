@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react"
+import { ReviewContext } from "../ReviewContext"
 
-
-function ReviewStats({reviews}) {
+function ReviewStats() {
+  const {reviews} = useContext(ReviewContext)
     // sum of the total reviews rating and divided by the total length of the array and the output is converted to a single decimal place.
 
     let average = (reviews?.reduce((acc, cur) => {
